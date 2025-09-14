@@ -1,4 +1,4 @@
 {
-	"image": "ghcr.io/ublue-os/devcontainer:latest",
+	"image": "ghcr.io/iitzrohan/devcontainer:latest",
 	"name": "akmods-devcontainer"
 }
