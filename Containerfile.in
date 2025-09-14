@@ -169,6 +169,7 @@ RUN --mount=type=cache,dst=/var/cache/dnf \
     --mount=type=cache,dst=/var/cache/libdnf5 \
     bash <<'RUNEOF'
 set "${CI+-x}" -euo pipefail
+/tmp/setup_container_signing.sh
 #ifdef ZFS
 /tmp/dual-sign-zfs.sh
 #else
