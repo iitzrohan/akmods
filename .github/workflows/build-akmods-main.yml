@@ -13,7 +13,7 @@ on:
     paths-ignore:
       - '**.md'
   schedule:
-    - cron: "50 4 * * 3" # 4:50 UTC Wednesday
+    - cron: "50 4 * * 2" # 4:50 UTC Tuesday
     - cron: "50 4 * * 6" # 4:50 UTC Saturday
   workflow_dispatch:
 jobs:
