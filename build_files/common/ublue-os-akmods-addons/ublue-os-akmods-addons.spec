@@ -22,21 +22,21 @@ Adds the signing key for importing with mokutil to enable secure boot for kernel
 
 %build
 # Have different name for *.der in case kmodgenca is needed for creating more keys
-install -Dm0644 %{SOURCE0} %{buildroot}%{_datadir}/ublue-os/%{_sysconfdir}/pki/akmods/certs/akmods-ublue.der
+install -Dm0644 %{SOURCE0} %{buildroot}%{_datadir}/ublue-os/%{_sysconfdir}/pki/akmods/certs/akmods-atomic.der
 install -Dm0644 %{SOURCE1} %{buildroot}%{_datadir}/ublue-os/%{_sysconfdir}/yum.repos.d/_copr_ublue-os-akmods.repo
 install -Dm0644 %{SOURCE2} %{buildroot}%{_datadir}/ublue-os/%{_sysconfdir}/yum.repos.d/negativo17-fedora-multimedia.repo
 
 sed -i 's@enabled=1@enabled=0@g' %{buildroot}%{_datadir}/ublue-os/%{_sysconfdir}/yum.repos.d/negativo17-fedora-multimedia.repo
 
-install -Dm0644 %{buildroot}%{_datadir}/ublue-os/%{_sysconfdir}/pki/akmods/certs/akmods-ublue.der            %{buildroot}%{_sysconfdir}/pki/akmods/certs/akmods-ublue.der
+install -Dm0644 %{buildroot}%{_datadir}/ublue-os/%{_sysconfdir}/pki/akmods/certs/akmods-atomic.der            %{buildroot}%{_sysconfdir}/pki/akmods/certs/akmods-atomic.der
 install -Dm0644 %{buildroot}%{_datadir}/ublue-os/%{_sysconfdir}/yum.repos.d/_copr_ublue-os-akmods.repo    %{buildroot}%{_sysconfdir}/yum.repos.d/_copr_ublue-os-akmods.repo
 install -Dm0644 %{buildroot}%{_datadir}/ublue-os/%{_sysconfdir}/yum.repos.d/negativo17-fedora-multimedia.repo     %{buildroot}%{_sysconfdir}/yum.repos.d/negativo17-fedora-multimedia.repo
 
 %files
-%attr(0644,root,root) %{_datadir}/ublue-os/%{_sysconfdir}/pki/akmods/certs/akmods-ublue.der
+%attr(0644,root,root) %{_datadir}/ublue-os/%{_sysconfdir}/pki/akmods/certs/akmods-atomic.der
 %attr(0644,root,root) %{_datadir}/ublue-os/%{_sysconfdir}/yum.repos.d/_copr_ublue-os-akmods.repo
 %attr(0644,root,root) %{_datadir}/ublue-os/%{_sysconfdir}/yum.repos.d/negativo17-fedora-multimedia.repo
-%attr(0644,root,root) %{_sysconfdir}/pki/akmods/certs/akmods-ublue.der
+%attr(0644,root,root) %{_sysconfdir}/pki/akmods/certs/akmods-atomic.der
 %attr(0644,root,root) %{_sysconfdir}/yum.repos.d/_copr_ublue-os-akmods.repo
 %attr(0644,root,root) %{_sysconfdir}/yum.repos.d/negativo17-fedora-multimedia.repo
 

@@ -6,14 +6,14 @@
 # Modify the inputs in workflow-templates
 name: Build CENTOS akmods
 on:
-  merge_group:
-  pull_request:
-    branches:
-      - main
-    paths-ignore:
-      - '**.md'
-  schedule:
-    - cron: '25 0 * * *'  # 0025 UTC everyday
+  # merge_group:
+  # pull_request:
+  #   branches:
+  #     - main
+  #   paths-ignore:
+  #     - '**.md'
+  # schedule:
+  #   - cron: '25 0 * * *'  # 0025 UTC everyday
   workflow_dispatch:
 jobs:
   cache_kernel_centos_10:

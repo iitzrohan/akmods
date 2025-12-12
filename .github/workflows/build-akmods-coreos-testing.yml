@@ -6,14 +6,14 @@
 # Modify the inputs in workflow-templates
 name: Build COREOS-TESTING akmods
 on:
-  merge_group:
-  pull_request:
-    branches:
-      - main
-    paths-ignore:
-      - '**.md'
-  schedule:
-    - cron: '07 0 * * *'  # 0007 UTC everyday
+  # merge_group:
+  # pull_request:
+  #   branches:
+  #     - main
+  #   paths-ignore:
+  #     - '**.md'
+  # schedule:
+  #   - cron: '07 0 * * *'  # 0007 UTC everyday
   workflow_dispatch:
 jobs:
   cache_kernel_coreos-testing_43:
